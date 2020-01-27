@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  application:
+    #模块名
+    name: alibaba-web
+  cloud:
+    nacos:
+      discovery:
+        #nacos注册中心
+        server-addr: 127.0.0.1:8848
+        cluster-name: Alibaba
+        metadata:
+          version: 0.1
+          target-version: 0.1
+dubbo:
+  registry:
+    # 挂载到 Spring Cloud 注册中心
+    address: spring-cloud://127.0.0.1
+  # 用于服务消费方订阅服务提供方的应用名称的列表，若需订阅多应用，使用 "," 分割。 不推荐使用默认值为 "*"，它将订阅所有应用
+  cloud:
+    subscribed-services: alibaba-articles,alibaba-users
