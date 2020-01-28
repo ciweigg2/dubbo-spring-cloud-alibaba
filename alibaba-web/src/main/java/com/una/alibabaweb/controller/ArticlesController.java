@@ -1,7 +1,13 @@
 package com.una.alibabaweb.controller;
 
 import com.una.alibabaarticles.RpcArticlesService;
+import com.una.alibabaarticles.mybatis.model.Articles;
+import com.una.alibabacommon.ResponseView;
+import com.una.alibabacommon.page.MyIPage;
+import com.una.alibabacommon.page.MybatisPlusPage;
 import org.apache.dubbo.config.annotation.Reference;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,6 +28,11 @@ public class ArticlesController {
     @RequestMapping(value = "/getArticlesAndUsers")
     public void getArticlesAndUsers(){
         System.out.println(rpcArticlesService.getArticlesAndUsers());
+    }
+
+    @PostMapping(value = "/pageArticles")
+    public ResponseView<MyIPage<Articles>> pageArticles(@RequestBody MybatisPlusPage<Articles> mybatisPlusPage) {
+        return ResponseView.success(rpcArticlesService.pageArticles(mybatisPlusPage));
     }
 
 }

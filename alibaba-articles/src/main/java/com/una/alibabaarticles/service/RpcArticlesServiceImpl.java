@@ -1,8 +1,11 @@
 package com.una.alibabaarticles.service;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.una.alibabaarticles.RpcArticlesService;
 import com.una.alibabaarticles.mybatis.model.Articles;
 import com.una.alibabaarticles.mybatis.service.ArticlesService;
+import com.una.alibabacommon.page.MybatisPlusPage;
 import com.una.alibabausers.RpcUsersService;
 import com.una.alibabausers.mybatis.model.Users;
 import org.apache.dubbo.config.annotation.Reference;
@@ -32,6 +35,15 @@ public class RpcArticlesServiceImpl implements RpcArticlesService {
             System.out.println(users);
         }
         return articles;
+    }
+
+    @Override
+    public Page<Articles> pageArticles(MybatisPlusPage<Articles> mybatisPlusPage) {
+        QueryWrapper<Articles> wrapper = new QueryWrapper();
+        //根据不为空的字段查询
+        wrapper.setEntity(mybatisPlusPage.getObject());
+        Page<Articles> page = new Page<>(mybatisPlusPage.getCurrent() ,mybatisPlusPage.getSize());
+        return articlesService.page(page ,wrapper);
     }
 
 }

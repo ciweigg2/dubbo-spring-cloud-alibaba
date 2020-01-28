@@ -1,6 +1,8 @@
 package com.una.alibabaarticles;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.una.alibabaarticles.mybatis.model.Articles;
+import com.una.alibabacommon.page.MybatisPlusPage;
 
 /**
  * @author Una Ma
@@ -11,5 +13,7 @@ import com.una.alibabaarticles.mybatis.model.Articles;
 public interface RpcArticlesService {
 
     Articles getArticlesAndUsers();
+
+    Page<Articles> pageArticles(MybatisPlusPage<Articles> mybatisPlusPage);
 
 }
