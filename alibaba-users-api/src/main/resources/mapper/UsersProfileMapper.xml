@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.una.alibabausers.mybatis.mapper.UsersProfileMapper">
+  <resultMap id="BaseResultMap" type="com.una.alibabausers.mybatis.model.UsersProfile">
+    <!--@mbg.generated-->
+    <!--@Table users_profile-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="uid" jdbcType="BIGINT" property="uid" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+    <result column="gender" jdbcType="INTEGER" property="gender" />
+    <result column="birthday" jdbcType="VARCHAR" property="birthday" />
+    <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+    <result column="years_id" jdbcType="BIGINT" property="yearsId" />
+    <result column="star_id" jdbcType="BIGINT" property="starId" />
+    <result column="social_class" jdbcType="BIGINT" property="socialClass" />
+    <result column="industry" jdbcType="BIGINT" property="industry" />
+    <result column="marriage_status" jdbcType="BIGINT" property="marriageStatus" />
+    <result column="bear_status" jdbcType="BIGINT" property="bearStatus" />
+    <result column="excellent" jdbcType="INTEGER" property="excellent" />
+    <result column="introduced" jdbcType="VARCHAR" property="introduced" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="is_promoter" jdbcType="INTEGER" property="isPromoter" />
+    <result column="is_activate" jdbcType="INTEGER" property="isActivate" />
+    <result column="referee_uid" jdbcType="INTEGER" property="refereeUid" />
+    <result column="qrcode" jdbcType="VARCHAR" property="qrcode" />
+    <result column="third_part_bind" jdbcType="VARCHAR" property="thirdPartBind" />
+    <result column="v_lv" jdbcType="INTEGER" property="vLv" />
+    <result column="is_client_login" jdbcType="INTEGER" property="isClientLogin" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, `uid`, mobile, nick_name, gender, birthday, avatar, years_id, star_id, social_class, 
+    industry, marriage_status, bear_status, excellent, introduced, create_time, update_time, 
+    is_promoter, is_activate, referee_uid, qrcode, third_part_bind, v_lv, is_client_login
+  </sql>
+</mapper>

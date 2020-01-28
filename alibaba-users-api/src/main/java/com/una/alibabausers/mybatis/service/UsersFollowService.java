@@ -1,6 +1,6 @@
 package com.una.alibabausers.mybatis.service;
 
-import com.una.alibabausers.mybatis.model.Users;
+import com.una.alibabausers.mybatis.model.UsersFollow;
 import com.baomidou.mybatisplus.extension.service.IService;
     /**
  *${description}
@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  *@date 2020/1/28 11:31 下午
  *@menu ${description}
 */
-public interface UsersService extends IService<Users>{
+public interface UsersFollowService extends IService<UsersFollow>{
 
 
 }

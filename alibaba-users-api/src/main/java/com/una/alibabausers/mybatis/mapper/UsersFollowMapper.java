@@ -1,7 +1,7 @@
 package com.una.alibabausers.mybatis.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.una.alibabausers.mybatis.model.Users;
+import com.una.alibabausers.mybatis.model.UsersFollow;
 
 /**
  *${description}
@@ -9,5 +9,5 @@ import com.una.alibabausers.mybatis.model.Users;
  *@date 2020/1/28 11:31 下午
  *@menu ${description}
 */
-public interface UsersMapper extends BaseMapper<Users> {
+public interface UsersFollowMapper extends BaseMapper<UsersFollow> {
 }

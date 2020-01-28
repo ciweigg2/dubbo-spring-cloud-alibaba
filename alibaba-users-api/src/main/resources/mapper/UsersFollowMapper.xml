@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.una.alibabausers.mybatis.mapper.UsersFollowMapper">
+  <resultMap id="BaseResultMap" type="com.una.alibabausers.mybatis.model.UsersFollow">
+    <!--@mbg.generated-->
+    <!--@Table users_follow-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="source_uid" jdbcType="BIGINT" property="sourceUid" />
+    <result column="target_uid" jdbcType="BIGINT" property="targetUid" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, source_uid, target_uid, create_time
+  </sql>
+</mapper>

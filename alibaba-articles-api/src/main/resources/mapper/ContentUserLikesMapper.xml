@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.una.alibabaarticles.mybatis.mapper.ContentUserLikesMapper">
+  <resultMap id="BaseResultMap" type="com.una.alibabaarticles.mybatis.model.ContentUserLikes">
+    <!--@mbg.generated-->
+    <!--@Table content_user_likes-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="cid" jdbcType="BIGINT" property="cid" />
+    <result column="tag_id" jdbcType="BIGINT" property="tagId" />
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, cid, tag_id, `uid`, create_time
+  </sql>
+</mapper>

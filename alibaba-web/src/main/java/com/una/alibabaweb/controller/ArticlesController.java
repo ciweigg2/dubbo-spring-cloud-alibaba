@@ -1,7 +1,7 @@
 package com.una.alibabaweb.controller;
 
-import com.una.alibabaarticles.RpcArticlesService;
-import com.una.alibabaarticles.mybatis.model.Articles;
+import com.una.alibabaarticles.RpcContentService;
+import com.una.alibabaarticles.mybatis.model.Content;
 import com.una.alibabacommon.ResponseView;
 import com.una.alibabacommon.page.MyIPage;
 import com.una.alibabacommon.page.MybatisPlusPage;
@@ -23,16 +23,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class ArticlesController {
 
     @Reference
-    public RpcArticlesService rpcArticlesService;
+    public RpcContentService rpcContentService;
 
-    @RequestMapping(value = "/getArticlesAndUsers")
-    public void getArticlesAndUsers(){
-        System.out.println(rpcArticlesService.getArticlesAndUsers());
-    }
+//    @RequestMapping(value = "/getArticlesAndUsers")
+//    public void getArticlesAndUsers(@RequestBody MybatisPlusPage<ArticlesDTO> mybatisPlusPage){
+//        System.out.println(rpcArticlesService.getArticlesAndUsers(mybatisPlusPage));
+//    }
 
-    @PostMapping(value = "/pageArticles")
-    public ResponseView<MyIPage<Articles>> pageArticles(@RequestBody MybatisPlusPage<Articles> mybatisPlusPage) {
-        return ResponseView.success(rpcArticlesService.pageArticles(mybatisPlusPage));
+    @PostMapping(value = "/pageContents")
+    public ResponseView<MyIPage<Content>> pageContents(@RequestBody MybatisPlusPage<Content> mybatisPlusPage) {
+        return ResponseView.success(rpcContentService.pageContents(mybatisPlusPage));
     }
 
 }

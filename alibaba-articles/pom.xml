@@ -40,6 +40,12 @@
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
 		</dependency>
+		<!--diboot关联多表查询返回VO-->
+		<dependency>
+			<groupId>com.diboot</groupId>
+			<artifactId>diboot-core-spring-boot-starter</artifactId>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 
 	<build>

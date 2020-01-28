@@ -4,9 +4,9 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.List;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.una.alibabausers.mybatis.mapper.UsersMapper;
-import com.una.alibabausers.mybatis.model.Users;
-import com.una.alibabausers.mybatis.service.UsersService;
+import com.una.alibabausers.mybatis.model.UsersFollow;
+import com.una.alibabausers.mybatis.mapper.UsersFollowMapper;
+import com.una.alibabausers.mybatis.service.UsersFollowService;
 /**
  *${description}
  *@author Una Ma
@@ -14,6 +14,6 @@ import com.una.alibabausers.mybatis.service.UsersService;
  *@menu ${description}
 */
 @Service
-public class UsersServiceImpl extends ServiceImpl<UsersMapper, Users> implements UsersService{
+public class UsersFollowServiceImpl extends ServiceImpl<UsersFollowMapper, UsersFollow> implements UsersFollowService{
 
 }

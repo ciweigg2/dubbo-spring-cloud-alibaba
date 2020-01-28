@@ -11,10 +11,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- *@className Users
- *@description
+ *${description}
  *@author Una Ma
- *@date 2020/1/27 7:03 下午
+ *@date 2020/1/28 11:31 下午
+ *@menu ${description}
 */
 @Data
 @AllArgsConstructor
@@ -22,20 +22,29 @@ import lombok.NoArgsConstructor;
 @TableName(value = "users")
 public class Users implements Serializable {
     /**
-     * 用户id
+     * 用户编号 主键
      */
     @TableId(value = "uid", type = IdType.AUTO)
-    private Integer uid;
+    private Long uid;
 
     /**
-     * 用户名
+     * 账号
      */
     @TableField(value = "user_name")
     private String userName;
 
     /**
-     * 创建时间
+     * 密码
      */
+    @TableField(value = "encrypt")
+    private String encrypt;
+
+    /**
+     * 盐
+     */
+    @TableField(value = "salt")
+    private String salt;
+
     @TableField(value = "create_time")
     private Date createTime;
 
@@ -45,13 +54,41 @@ public class Users implements Serializable {
     @TableField(value = "update_time")
     private Date updateTime;
 
+    /**
+     * 状态
+     */
+    @TableField(value = "status")
+    private Integer status;
+
+    /**
+     * 0 注册用户 1 游客
+     */
+    @TableField(value = "touristType")
+    private Integer touristtype;
+
+    /**
+     * 0 正常 1 禁用
+     */
+    @TableField(value = "disable_user")
+    private Integer disableUser;
+
     private static final long serialVersionUID = 1L;
 
     public static final String COL_UID = "uid";
 
     public static final String COL_USER_NAME = "user_name";
 
+    public static final String COL_ENCRYPT = "encrypt";
+
+    public static final String COL_SALT = "salt";
+
     public static final String COL_CREATE_TIME = "create_time";
 
     public static final String COL_UPDATE_TIME = "update_time";
+
+    public static final String COL_STATUS = "status";
+
+    public static final String COL_TOURISTTYPE = "touristType";
+
+    public static final String COL_DISABLE_USER = "disable_user";
 }

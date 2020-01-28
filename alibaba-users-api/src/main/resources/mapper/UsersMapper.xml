@@ -4,13 +4,19 @@
   <resultMap id="BaseResultMap" type="com.una.alibabausers.mybatis.model.Users">
     <!--@mbg.generated-->
     <!--@Table users-->
-    <id column="uid" jdbcType="INTEGER" property="uid" />
+    <id column="uid" jdbcType="BIGINT" property="uid" />
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="encrypt" jdbcType="VARCHAR" property="encrypt" />
+    <result column="salt" jdbcType="VARCHAR" property="salt" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="touristType" jdbcType="INTEGER" property="touristtype" />
+    <result column="disable_user" jdbcType="INTEGER" property="disableUser" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    `uid`, user_name, create_time, update_time
+    `uid`, user_name, encrypt, salt, create_time, update_time, `status`, touristType, 
+    disable_user
   </sql>
 </mapper>
