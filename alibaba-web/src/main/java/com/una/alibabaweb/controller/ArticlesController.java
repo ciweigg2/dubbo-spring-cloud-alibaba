@@ -6,10 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+ * 文章获取
+ *
  * @author Una Ma
- * @className ArticlesController
- * @description 文章获取
  * @date 2020/1/27 4:00 下午
+ * @menu 文章获取
  */
 @RestController
 @RequestMapping(value = "/articles")
