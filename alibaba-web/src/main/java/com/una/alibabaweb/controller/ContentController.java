@@ -12,24 +12,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 文章获取
+ * 文章服务接口
  *
  * @author Una Ma
  * @date 2020/1/27 4:00 下午
- * @menu 文章获取
+ * @menu 文章服务接口
  */
 @RestController
-@RequestMapping(value = "/articles")
-public class ArticlesController {
+@RequestMapping(value = "/content")
+public class ContentController {
 
     @Reference
     public RpcContentService rpcContentService;
 
-//    @RequestMapping(value = "/getArticlesAndUsers")
-//    public void getArticlesAndUsers(@RequestBody MybatisPlusPage<ArticlesDTO> mybatisPlusPage){
-//        System.out.println(rpcArticlesService.getArticlesAndUsers(mybatisPlusPage));
-//    }
-
+    /**
+     * 分页查询文章
+     *
+     * @param mybatisPlusPage 分页信息
+     * @return {@link ResponseView<MyIPage<Content>> }
+     * @author Una Ma
+     * @date 2020/01/29 11:05:56
+     * @description 分页查询文章
+     * @status 已发布
+     */
     @PostMapping(value = "/pageContents")
     public ResponseView<MyIPage<Content>> pageContents(@RequestBody MybatisPlusPage<Content> mybatisPlusPage) {
         return ResponseView.success(rpcContentService.pageContents(mybatisPlusPage));
