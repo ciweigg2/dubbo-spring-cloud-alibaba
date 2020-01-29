@@ -26,3 +26,6 @@ dubbo:
   registry:
     #   The Spring Cloud Dubbo's registry extension
     address: spring-cloud://127.0.0.1
+  # 是否检查消费者是否注册
+  consumer:
+    check: false

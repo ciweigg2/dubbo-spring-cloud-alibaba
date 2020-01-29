@@ -3,6 +3,7 @@ package com.una.alibabausers;
 import com.una.alibabacommon.ResponseView;
 import com.una.alibabacommon.page.MybatisPlusPage;
 import com.una.alibabausers.dto.UsersDTO;
+import com.una.alibabausers.dto.UsersFansDTO;
 
 /**
  * @author Una Ma
@@ -13,5 +14,7 @@ import com.una.alibabausers.dto.UsersDTO;
 public interface RpcUsersService {
 
     ResponseView pageUsers(MybatisPlusPage<UsersDTO> mybatisPlusPage);
+
+    ResponseView getUsersFans(MybatisPlusPage<UsersFansDTO> mybatisPlusPage);
 
 }

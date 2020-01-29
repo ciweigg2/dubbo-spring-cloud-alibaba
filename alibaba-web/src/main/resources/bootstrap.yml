@@ -20,3 +20,7 @@ dubbo:
   # 用于服务消费方订阅服务提供方的应用名称的列表，若需订阅多应用，使用 "," 分割。 不推荐使用默认值为 "*"，它将订阅所有应用
   cloud:
     subscribed-services: alibaba-articles,alibaba-users
+  # 是否检查消费者是否注册
+  consumer:
+    check: false
+    timeout: 1000
