@@ -40,4 +40,18 @@ public class ContentController {
         return ResponseView.success(rpcContentService.pageContents(mybatisPlusPage));
     }
 
+    /**
+     * seata分布式事务测试
+     *
+     * @return {@link ResponseView<Boolean> }
+     * @author Una Ma
+     * @date 2020/01/30 12:24:29
+     * @description seata
+     * @status 已发布
+     */
+    @PostMapping(value = "/seata")
+    public ResponseView<Boolean> seata(){
+        return ResponseView.success(rpcContentService.insertContent());
+    }
+
 }

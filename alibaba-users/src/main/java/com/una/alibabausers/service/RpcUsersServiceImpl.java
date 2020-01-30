@@ -19,6 +19,7 @@ import com.una.alibabausers.vo.UsersFansVO;
 import com.una.alibabausers.vo.UsersVO;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -29,6 +30,7 @@ import java.util.List;
  * @date 2020/1/27 3:42 下午
  */
 @Service
+@Transactional
 public class RpcUsersServiceImpl implements RpcUsersService {
 
     @Autowired
@@ -91,6 +93,11 @@ public class RpcUsersServiceImpl implements RpcUsersService {
         }else{
             return 1;
         }
+    }
+
+    @Override
+    public boolean insertUsersFollow(UsersFollow usersFollow) {
+        return usersFollowService.save(usersFollow);
     }
 
 }

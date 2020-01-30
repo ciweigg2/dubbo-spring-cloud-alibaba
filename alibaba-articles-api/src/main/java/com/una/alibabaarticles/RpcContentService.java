@@ -14,4 +14,6 @@ public interface RpcContentService {
 
     Page<Content> pageContents(MybatisPlusPage<Content> mybatisPlusPage);
 
+    boolean insertContent();
+
 }
