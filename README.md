@@ -15,5 +15,3 @@
 集成Dubbo解决Rpc调用
 
 集成Diboot解决多表查询
-
-测试正式集成jira
